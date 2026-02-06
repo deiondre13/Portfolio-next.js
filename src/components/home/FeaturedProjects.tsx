@@ -24,7 +24,7 @@ export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
           className="section-header"
         >
           <span className="section-label">
-            <span className="w-8 h-px bg-[var(--accent-gold)]" />
+            <span className="w-8 h-px bg-accent" />
             Featured Work
           </span>
           <h2 className="section-title">Recent Projects</h2>
@@ -50,10 +50,10 @@ export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
             >
               <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
                 {/* Image */}
-                <div className={`relative h-64 lg:h-auto min-h-[300px] bg-[var(--bg-dark-tertiary)] ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-700)]/20 to-[var(--accent-gold)]/10" />
+                <div className={`relative h-64 lg:h-auto min-h-[300px] bg-surface-2 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-accent-2/5" />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-6xl font-bold text-[var(--primary-500)]/20">
+                    <div className="text-6xl font-bold text-accent/20">
                       {String(index + 1).padStart(2, '0')}
                     </div>
                   </div>
@@ -65,10 +65,10 @@ export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
 
                 {/* Content */}
                 <div className="p-8 lg:p-10 flex flex-col justify-center">
-                  <h3 className="text-2xl font-bold mb-3 text-[var(--text-primary)]">
+                  <h3 className="text-2xl font-bold mb-3 text-text">
                     {project.title}
                   </h3>
-                  <p className="text-[var(--text-muted)] mb-6 leading-relaxed">
+                  <p className="text-text-muted mb-6 leading-relaxed">
                     {project.longDescription || project.description}
                   </p>
 

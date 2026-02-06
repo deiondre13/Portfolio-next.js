@@ -26,9 +26,9 @@ export default function HeroSection() {
           >
             {/* Status Badge */}
             <motion.div variants={fadeInUp} className="mb-6">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--bg-card)] border border-[var(--border-subtle)]">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface/60 border border-[var(--border-subtle)]">
                 <span className="w-2 h-2 bg-[var(--success)] rounded-full animate-pulse" />
-                <span className="text-sm text-[var(--text-secondary)]">Available for opportunities</span>
+                <span className="text-sm text-text-muted">Available for opportunities</span>
               </span>
             </motion.div>
 
@@ -41,7 +41,7 @@ export default function HeroSection() {
             {/* Role */}
             <motion.p 
               variants={fadeInUp}
-              className="text-xl md:text-2xl font-semibold text-[var(--primary-300)] mb-6"
+              className="text-xl md:text-2xl font-semibold text-accent-2 mb-6"
             >
               Full-Stack Software Developer
             </motion.p>
@@ -49,7 +49,7 @@ export default function HeroSection() {
             {/* Description */}
             <motion.p 
               variants={fadeInUp}
-              className="text-lg text-[var(--text-muted)] mb-8 max-w-xl"
+              className="text-lg text-text-muted mb-8 max-w-xl"
             >
               I craft exceptional digital experiences with modern technologies. 
               Passionate about building clean, efficient, and user-centric applications 
@@ -98,7 +98,7 @@ export default function HeroSection() {
           >
             <div className="relative">
               {/* Decorative Elements */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-[var(--accent-gold)] via-[var(--primary-500)] to-[var(--accent-gold)] rounded-full opacity-20 blur-2xl animate-pulse" />
+              <div className="absolute -inset-4 bg-gradient-to-r from-accent-2 via-accent to-accent-2 rounded-full opacity-20 blur-2xl animate-pulse" />
               
               {/* Profile Photo */}
               <div className="profile-photo-wrapper w-64 h-64 md:w-80 md:h-80">
@@ -118,7 +118,7 @@ export default function HeroSection() {
                   href="https://github.com/deiondre13"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-[var(--bg-card)] border border-[var(--border-subtle)] flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--accent-gold)] hover:border-[var(--accent-gold)] transition-all"
+                  className="w-10 h-10 rounded-full bg-surface/60 border border-[var(--border-subtle)] flex items-center justify-center text-text-muted hover:text-accent-2 hover:border-accent transition-all"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -128,7 +128,7 @@ export default function HeroSection() {
                   href="https://www.linkedin.com/in/deiondre-smith-03254529a/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-[var(--bg-card)] border border-[var(--border-subtle)] flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--accent-gold)] hover:border-[var(--accent-gold)] transition-all"
+                  className="w-10 h-10 rounded-full bg-surface/60 border border-[var(--border-subtle)] flex items-center justify-center text-text-muted hover:text-accent-2 hover:border-accent transition-all"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >

@@ -37,7 +37,7 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[var(--bg-dark)]/95 backdrop-blur-lg border-b border-[var(--border-subtle)] shadow-lg"
+          ? "bg-[var(--bg)]/95 backdrop-blur-lg border-b border-[var(--border-subtle)] shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -46,11 +46,11 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-1">
             <span className="text-xl font-bold">
-              <span className="text-[var(--accent-gold)] group-hover:text-[var(--accent-gold-light)] transition-colors">&lt;</span>
-              <span className="text-[var(--text-primary)]">DS</span>
-              <span className="text-[var(--accent-gold)] group-hover:text-[var(--accent-gold-light)] transition-colors">/&gt;</span>
+              <span className="text-accent group-hover:text-accent-2 transition-colors">&lt;</span>
+              <span className="text-text">DS</span>
+              <span className="text-accent group-hover:text-accent-2 transition-colors">/&gt;</span>
             </span>
-            <span className="hidden sm:inline-block text-[var(--text-secondary)] font-medium ml-2">
+            <span className="hidden sm:inline-block text-text-muted font-medium ml-2">
               Deiondre Smith
             </span>
           </Link>
@@ -63,15 +63,15 @@ export default function Navbar() {
                 href={link.href}
                 className={`relative px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-lg ${
                   pathname === link.href
-                    ? "text-[var(--accent-gold)]"
-                    : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+                    ? "text-accent"
+                    : "text-text-muted hover:text-text"
                 }`}
               >
                 {link.label}
                 {pathname === link.href && (
                   <motion.span
                     layoutId="navbar-indicator"
-                    className="absolute inset-0 bg-[var(--accent-gold)]/10 rounded-lg -z-10"
+                    className="absolute inset-0 bg-accent/10 rounded-lg -z-10"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
@@ -86,7 +86,7 @@ export default function Navbar() {
                 href="https://github.com/deiondre13"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 flex items-center justify-center rounded-lg text-[var(--text-muted)] hover:text-[var(--accent-gold)] hover:bg-[var(--accent-gold)]/10 transition-all"
+                className="w-9 h-9 flex items-center justify-center rounded-lg text-text-muted hover:text-accent-2 hover:bg-accent/10 transition-all"
                 title="GitHub"
               >
                 <FiGithub size={18} />
@@ -95,7 +95,7 @@ export default function Navbar() {
                 href="https://www.linkedin.com/in/deiondre-smith-03254529a/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 flex items-center justify-center rounded-lg text-[var(--text-muted)] hover:text-[var(--accent-gold)] hover:bg-[var(--accent-gold)]/10 transition-all"
+                className="w-9 h-9 flex items-center justify-center rounded-lg text-text-muted hover:text-accent-2 hover:bg-accent/10 transition-all"
                 title="LinkedIn"
               >
                 <FiLinkedin size={18} />
@@ -109,7 +109,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg text-[var(--text-secondary)] hover:text-[var(--accent-gold)] hover:bg-[var(--accent-gold)]/10 transition-all"
+            className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg text-text-muted hover:text-accent-2 hover:bg-accent/10 transition-all"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -139,8 +139,8 @@ export default function Navbar() {
                       href={link.href}
                       className={`block px-4 py-3 rounded-lg font-medium transition-all ${
                         pathname === link.href
-                          ? "text-[var(--accent-gold)] bg-[var(--accent-gold)]/10"
-                          : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-card)]"
+                          ? "text-accent bg-accent/10"
+                          : "text-text-muted hover:text-text hover:bg-surface/60"
                       }`}
                       onClick={() => setIsOpen(false)}
                     >
@@ -155,7 +155,7 @@ export default function Navbar() {
                       href="https://github.com/deiondre13"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--bg-card)] text-[var(--text-muted)] hover:text-[var(--accent-gold)] transition-colors"
+                      className="w-10 h-10 flex items-center justify-center rounded-lg bg-surface/60 text-text-muted hover:text-accent-2 transition-colors"
                     >
                       <FiGithub size={20} />
                     </a>
@@ -163,7 +163,7 @@ export default function Navbar() {
                       href="https://www.linkedin.com/in/deiondre-smith-03254529a/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--bg-card)] text-[var(--text-muted)] hover:text-[var(--accent-gold)] transition-colors"
+                      className="w-10 h-10 flex items-center justify-center rounded-lg bg-surface/60 text-text-muted hover:text-accent-2 transition-colors"
                     >
                       <FiLinkedin size={20} />
                     </a>

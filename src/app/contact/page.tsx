@@ -88,7 +88,7 @@ export default function Contact() {
           className="section-header"
         >
           <span className="section-label">
-            <span className="w-8 h-px bg-[var(--accent-gold)]" />
+            <span className="w-8 h-px bg-accent" />
             Contact
           </span>
           <h1 className="section-title">Get In Touch</h1>
@@ -110,17 +110,17 @@ export default function Contact() {
               key={index}
               variants={fadeInUp}
               onClick={() => setQuickSubject(action.subject)}
-              className="premium-card p-5 text-left group hover:border-[var(--accent-gold)] transition-all"
+              className="premium-card p-5 text-left group hover:border-accent transition-all"
             >
               <div className="flex items-start gap-4">
                 <div className="icon-wrapper w-10 h-10 text-base shrink-0 group-hover:scale-110 transition-transform">
                   <action.icon size={18} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent-gold)] transition-colors">
+                  <h3 className="font-semibold text-text group-hover:text-accent-2 transition-colors">
                     {action.title}
                   </h3>
-                  <p className="text-sm text-[var(--text-muted)]">{action.description}</p>
+                  <p className="text-sm text-text-muted">{action.description}</p>
                 </div>
               </div>
             </motion.button>
@@ -143,11 +143,11 @@ export default function Contact() {
                   Available for opportunities
                 </span>
               </div>
-              <p className="text-[var(--text-muted)] text-sm mb-4">
+              <p className="text-text-muted text-sm mb-4">
                 I&apos;m currently open to new opportunities, freelance projects, and collaborations.
               </p>
               <p className="text-[var(--text-secondary)] text-sm">
-                Response time: <span className="text-[var(--accent-gold)]">Within 24 hours</span>
+                Response time: <span className="text-accent">Within 24 hours</span>
               </p>
             </div>
 
@@ -158,8 +158,8 @@ export default function Contact() {
                   <FiMail size={20} />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm text-[var(--text-muted)] mb-1">Email</p>
-                  <p className="text-[var(--text-primary)] font-medium truncate">{EMAIL}</p>
+                  <p className="text-sm text-text-muted mb-1">Email</p>
+                  <p className="text-text font-medium truncate">{EMAIL}</p>
                 </div>
               </div>
               <div className="flex gap-2">
@@ -187,16 +187,16 @@ export default function Contact() {
                   <FiMapPin size={20} />
                 </div>
                 <div>
-                  <p className="text-sm text-[var(--text-muted)] mb-1">Location</p>
-                  <p className="text-[var(--text-primary)] font-medium">Available Remotely</p>
-                  <p className="text-sm text-[var(--text-muted)]">Open to relocation</p>
+                  <p className="text-sm text-text-muted mb-1">Location</p>
+                  <p className="text-text font-medium">Available Remotely</p>
+                  <p className="text-sm text-text-muted">Open to relocation</p>
                 </div>
               </div>
             </div>
 
             {/* Social Links */}
             <div className="premium-card p-6">
-              <h3 className="font-semibold mb-4 text-[var(--text-primary)]">Connect With Me</h3>
+              <h3 className="font-semibold mb-4 text-text">Connect With Me</h3>
               <div className="flex gap-3">
                 <motion.a
                   href="https://github.com/deiondre13"
@@ -230,7 +230,7 @@ export default function Contact() {
             className="lg:col-span-3"
           >
             <div className="premium-card p-8">
-              <h2 className="text-xl font-semibold mb-6 text-[var(--text-primary)]">
+              <h2 className="text-xl font-semibold mb-6 text-text">
                 Send a Message
               </h2>
 
@@ -268,7 +268,7 @@ export default function Contact() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 bg-[var(--bg-dark-tertiary)] border border-[var(--border-subtle)] rounded-lg focus:outline-none focus:border-[var(--accent-gold)] transition-colors text-[var(--text-primary)] placeholder:text-[var(--text-muted)]"
+                      className="w-full px-4 py-3 bg-surface-2 border border-[var(--border-subtle)] rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-colors text-text placeholder:text-text-muted"
                       placeholder="John Doe"
                     />
                   </div>
@@ -282,7 +282,7 @@ export default function Contact() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 bg-[var(--bg-dark-tertiary)] border border-[var(--border-subtle)] rounded-lg focus:outline-none focus:border-[var(--accent-gold)] transition-colors text-[var(--text-primary)] placeholder:text-[var(--text-muted)]"
+                      className="w-full px-4 py-3 bg-surface-2 border border-[var(--border-subtle)] rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-colors text-text placeholder:text-text-muted"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -298,7 +298,7 @@ export default function Contact() {
                     required
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-4 py-3 bg-[var(--bg-dark-tertiary)] border border-[var(--border-subtle)] rounded-lg focus:outline-none focus:border-[var(--accent-gold)] transition-colors text-[var(--text-primary)] placeholder:text-[var(--text-muted)]"
+                    className="w-full px-4 py-3 bg-surface-2 border border-[var(--border-subtle)] rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-colors text-text placeholder:text-text-muted"
                     placeholder="What's this about?"
                   />
                 </div>
@@ -313,7 +313,7 @@ export default function Contact() {
                     rows={5}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 bg-[var(--bg-dark-tertiary)] border border-[var(--border-subtle)] rounded-lg focus:outline-none focus:border-[var(--accent-gold)] transition-colors text-[var(--text-primary)] placeholder:text-[var(--text-muted)] resize-none"
+                    className="w-full px-4 py-3 bg-surface-2 border border-[var(--border-subtle)] rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-colors text-text placeholder:text-text-muted resize-none"
                     placeholder="Tell me about your project or inquiry..."
                   />
                 </div>
@@ -336,7 +336,7 @@ export default function Contact() {
                       </>
                     )}
                   </button>
-                  <p className="text-xs text-[var(--text-muted)] self-center">
+                  <p className="text-xs text-text-muted self-center">
                     I&apos;ll respond within 24 hours
                   </p>
                 </div>

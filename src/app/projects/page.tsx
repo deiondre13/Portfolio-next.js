@@ -25,7 +25,7 @@ export default function Projects() {
           className="section-header"
         >
           <span className="section-label">
-            <span className="w-8 h-px bg-[var(--accent-gold)]" />
+            <span className="w-8 h-px bg-accent" />
             Portfolio
           </span>
           <h1 className="section-title">My Projects</h1>
@@ -72,10 +72,10 @@ export default function Projects() {
                 className="premium-card overflow-hidden group"
               >
                 {/* Project Image */}
-                <div className="relative h-48 bg-[var(--bg-dark-tertiary)] overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-700)]/30 to-[var(--accent-gold)]/10" />
+                <div className="relative h-48 bg-surface-2 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/15 to-accent-2/5" />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-5xl font-bold text-[var(--primary-500)]/20">
+                    <span className="text-5xl font-bold text-accent/20">
                       {String(project.id).padStart(2, '0')}
                     </span>
                   </div>
@@ -95,12 +95,12 @@ export default function Projects() {
                   )}
 
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-[var(--bg-dark)]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                  <div className="absolute inset-0 bg-bg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-full bg-[var(--bg-card)] border border-[var(--border-default)] flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--accent-gold)] hover:border-[var(--accent-gold)] transition-all"
+                      className="w-12 h-12 rounded-full bg-surface/60 border border-border flex items-center justify-center text-text-muted hover:text-accent-2 hover:border-accent transition-all"
                     >
                       <FiGithub size={20} />
                     </a>
@@ -109,7 +109,7 @@ export default function Projects() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-12 h-12 rounded-full bg-[var(--bg-card)] border border-[var(--border-default)] flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--accent-gold)] hover:border-[var(--accent-gold)] transition-all"
+                        className="w-12 h-12 rounded-full bg-surface/60 border border-border flex items-center justify-center text-text-muted hover:text-accent-2 hover:border-accent transition-all"
                       >
                         <FiExternalLink size={20} />
                       </a>
@@ -119,7 +119,7 @@ export default function Projects() {
                         href={project.caseStudyUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-12 h-12 rounded-full bg-[var(--bg-card)] border border-[var(--border-default)] flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--accent-gold)] hover:border-[var(--accent-gold)] transition-all"
+                        className="w-12 h-12 rounded-full bg-surface/60 border border-border flex items-center justify-center text-text-muted hover:text-accent-2 hover:border-accent transition-all"
                       >
                         <FiBookOpen size={20} />
                       </a>
@@ -129,10 +129,10 @@ export default function Projects() {
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold mb-2 text-[var(--text-primary)] group-hover:text-[var(--accent-gold)] transition-colors">
+                  <h3 className="text-lg font-semibold mb-2 text-text group-hover:text-accent-2 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-[var(--text-muted)] text-sm mb-4 line-clamp-2">
+                  <p className="text-text-muted text-sm mb-4 line-clamp-2">
                     {project.description}
                   </p>
 
@@ -186,7 +186,7 @@ export default function Projects() {
             animate={{ opacity: 1 }}
             className="text-center py-16"
           >
-            <p className="text-[var(--text-muted)]">
+            <p className="text-text-muted">
               No projects found in this category.
             </p>
           </motion.div>

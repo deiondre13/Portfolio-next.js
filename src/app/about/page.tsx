@@ -69,7 +69,7 @@ export default function About() {
               className="flex justify-center lg:justify-start"
             >
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-[var(--accent-gold)] via-[var(--primary-500)] to-[var(--accent-gold)] rounded-2xl opacity-20 blur-2xl" />
+                <div className="absolute -inset-4 bg-gradient-to-r from-accent-2 via-accent to-accent-2 rounded-2xl opacity-20 blur-2xl" />
                 <div className="profile-photo-wrapper w-64 h-64 md:w-72 md:h-72">
                   <Image
                     src="/images/profile.jpg"
@@ -90,7 +90,7 @@ export default function About() {
               variants={staggerContainer}
             >
               <motion.span variants={fadeInUp} className="section-label mb-4">
-                <span className="w-8 h-px bg-[var(--accent-gold)]" />
+                <span className="w-8 h-px bg-accent" />
                 About Me
               </motion.span>
 
@@ -105,7 +105,7 @@ export default function About() {
                 cutting-edge technologies and best practices.
               </motion.p>
 
-              <motion.p variants={fadeInUp} className="text-[var(--text-muted)] mb-8">
+              <motion.p variants={fadeInUp} className="text-text-muted mb-8">
                 I enjoy tackling complex problems and turning ideas into reality through 
                 clean, efficient code. My goal is to create software that not only works 
                 flawlessly but also provides an exceptional user experience.
@@ -126,7 +126,7 @@ export default function About() {
       </section>
 
       {/* My Focus Section */}
-      <section className="section bg-[var(--bg-dark-secondary)]/50">
+      <section className="section bg-bg-2/50">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -136,7 +136,7 @@ export default function About() {
             className="section-header"
           >
             <span className="section-label">
-              <span className="w-8 h-px bg-[var(--accent-gold)]" />
+              <span className="w-8 h-px bg-accent" />
               My Focus
             </span>
             <h2 className="section-title">What Drives Me</h2>
@@ -158,8 +158,8 @@ export default function About() {
                 <div className="icon-wrapper mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <area.icon size={24} />
                 </div>
-                <h3 className="font-semibold mb-2 text-[var(--text-primary)]">{area.title}</h3>
-                <p className="text-sm text-[var(--text-muted)]">{area.description}</p>
+                <h3 className="font-semibold mb-2 text-text">{area.title}</h3>
+                <p className="text-sm text-text-muted">{area.description}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -177,7 +177,7 @@ export default function About() {
             className="section-header"
           >
             <span className="section-label">
-              <span className="w-8 h-px bg-[var(--accent-gold)]" />
+              <span className="w-8 h-px bg-accent" />
               Tech Stack
             </span>
             <h2 className="section-title">Skills & Technologies</h2>
@@ -192,7 +192,7 @@ export default function About() {
           >
             {/* Languages */}
             <motion.div variants={fadeInUp} className="premium-card p-6">
-              <h3 className="text-lg font-semibold mb-4 text-[var(--accent-gold)]">
+              <h3 className="text-lg font-semibold mb-4 text-accent">
                 Programming Languages
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -204,7 +204,7 @@ export default function About() {
 
             {/* Frameworks */}
             <motion.div variants={fadeInUp} className="premium-card p-6">
-              <h3 className="text-lg font-semibold mb-4 text-[var(--accent-gold)]">
+              <h3 className="text-lg font-semibold mb-4 text-accent">
                 Frameworks & Libraries
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -216,7 +216,7 @@ export default function About() {
 
             {/* Tools */}
             <motion.div variants={fadeInUp} className="premium-card p-6">
-              <h3 className="text-lg font-semibold mb-4 text-[var(--accent-gold)]">
+              <h3 className="text-lg font-semibold mb-4 text-accent">
                 Tools & Platforms
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -228,7 +228,7 @@ export default function About() {
 
             {/* Databases */}
             <motion.div variants={fadeInUp} className="premium-card p-6">
-              <h3 className="text-lg font-semibold mb-4 text-[var(--accent-gold)]">
+              <h3 className="text-lg font-semibold mb-4 text-accent">
                 Databases
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -242,7 +242,7 @@ export default function About() {
       </section>
 
       {/* Timeline & Currently Learning */}
-      <section className="section bg-[var(--bg-dark-secondary)]/50">
+      <section className="section bg-bg-2/50">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Timeline */}
@@ -253,7 +253,7 @@ export default function About() {
               variants={slideInLeft}
             >
               <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
-                <span className="w-8 h-px bg-[var(--accent-gold)]" />
+                <span className="w-8 h-px bg-accent" />
                 My Journey
               </h3>
               <div className="timeline">
@@ -275,23 +275,23 @@ export default function About() {
               variants={slideInRight}
             >
               <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
-                <span className="w-8 h-px bg-[var(--accent-gold)]" />
+                <span className="w-8 h-px bg-accent" />
                 Currently Learning
               </h3>
               <div className="space-y-6">
                 {currentlyLearning.map((item, index) => (
                   <div key={index} className="premium-card p-4">
                     <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-[var(--text-primary)]">{item.name}</span>
-                      <span className="text-sm text-[var(--accent-gold)]">{item.progress}%</span>
+                      <span className="font-medium text-text">{item.name}</span>
+                      <span className="text-sm text-accent">{item.progress}%</span>
                     </div>
-                    <div className="h-2 bg-[var(--bg-dark-tertiary)] rounded-full overflow-hidden">
+                    <div className="h-2 bg-surface-2 rounded-full overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${item.progress}%` }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, delay: index * 0.1 }}
-                        className="h-full bg-gradient-to-r from-[var(--primary-500)] to-[var(--accent-gold)] rounded-full"
+                        className="h-full bg-gradient-to-r from-accent to-accent-2 rounded-full"
                       />
                     </div>
                   </div>

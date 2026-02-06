@@ -33,7 +33,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="section bg-[var(--bg-dark-secondary)]/50">
+    <section className="section bg-bg-2/50">
       <div className="container-custom">
         {/* Section Header */}
         <motion.div
@@ -44,7 +44,7 @@ export default function ServicesSection() {
           className="section-header"
         >
           <span className="section-label">
-            <span className="w-8 h-px bg-[var(--accent-gold)]" />
+            <span className="w-8 h-px bg-accent" />
             What I Do
           </span>
           <h2 className="section-title">Services & Expertise</h2>
@@ -76,10 +76,10 @@ export default function ServicesSection() {
 
                 {/* Content */}
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold mb-3 text-[var(--text-primary)] group-hover:text-[var(--accent-gold)] transition-colors">
+                  <h3 className="text-xl font-semibold mb-3 text-text group-hover:text-accent-2 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-[var(--text-muted)] mb-4 text-sm leading-relaxed">
+                  <p className="text-text-muted mb-4 text-sm leading-relaxed">
                     {service.description}
                   </p>
 
