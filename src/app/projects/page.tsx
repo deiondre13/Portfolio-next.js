@@ -79,6 +79,13 @@ export default function Projects() {
                       {String(project.id).padStart(2, '0')}
                     </span>
                   </div>
+                  <Image
+                    src={project.imageUrl}
+                    alt={project.title}
+                    fill
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
                   
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4">
@@ -96,19 +103,21 @@ export default function Projects() {
 
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-bg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-full bg-surface/60 border border-border flex items-center justify-center text-text-muted hover:text-accent-2 hover:border-accent transition-all"
-                    >
-                      <FiGithub size={20} />
-                    </a>
+                    {project.githubUrl && !project.private && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="w-12 h-12 rounded-full bg-surface/60 border border-border flex items-center justify-center text-text-muted hover:text-accent-2 hover:border-accent transition-all"
+                      >
+                        <FiGithub size={20} />
+                      </a>
+                    )}
                     {project.liveUrl && (
                       <a
                         href={project.liveUrl}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noreferrer"
                         className="w-12 h-12 rounded-full bg-surface/60 border border-border flex items-center justify-center text-text-muted hover:text-accent-2 hover:border-accent transition-all"
                       >
                         <FiExternalLink size={20} />
@@ -118,7 +127,7 @@ export default function Projects() {
                       <a
                         href={project.caseStudyUrl}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noreferrer"
                         className="w-12 h-12 rounded-full bg-surface/60 border border-border flex items-center justify-center text-text-muted hover:text-accent-2 hover:border-accent transition-all"
                       >
                         <FiBookOpen size={20} />
@@ -152,24 +161,30 @@ export default function Projects() {
 
                   {/* Action Links */}
                   <div className="flex items-center gap-3 pt-4 border-t border-[var(--border-subtle)]">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-ghost text-xs py-1.5 px-3"
-                    >
-                      <FiGithub size={14} />
-                      Code
-                    </a>
+                    {project.private ? (
+                      <span className="text-xs text-text-muted italic">
+                        Private repository — available on request
+                      </span>
+                    ) : project.githubUrl ? (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn btn-ghost text-xs py-1.5 px-3"
+                      >
+                        <FiGithub size={14} />
+                        GitHub
+                      </a>
+                    ) : null}
                     {project.liveUrl && (
                       <a
                         href={project.liveUrl}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noreferrer"
                         className="btn btn-ghost text-xs py-1.5 px-3"
                       >
                         <FiExternalLink size={14} />
-                        Demo
+                        Live Demo
                       </a>
                     )}
                   </div>

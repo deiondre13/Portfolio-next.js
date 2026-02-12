@@ -57,7 +57,13 @@ export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                       {String(index + 1).padStart(2, '0')}
                     </div>
                   </div>
-                  {/* Placeholder for actual project image */}
+                  <Image
+                    src={project.imageUrl}
+                    alt={project.title}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="chip chip-gold">Featured Project</div>
                   </div>
@@ -83,20 +89,26 @@ export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
 
                   {/* Links */}
                   <div className="flex items-center gap-4">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-outline"
-                    >
-                      <FiGithub size={18} />
-                      View Code
-                    </a>
+                    {project.private ? (
+                      <span className="text-sm text-text-muted italic">
+                        Private repository — available on request
+                      </span>
+                    ) : project.githubUrl ? (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn btn-outline"
+                      >
+                        <FiGithub size={18} />
+                        GitHub
+                      </a>
+                    ) : null}
                     {project.liveUrl && (
                       <a
                         href={project.liveUrl}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noreferrer"
                         className="btn btn-primary"
                       >
                         <FiExternalLink size={18} />
