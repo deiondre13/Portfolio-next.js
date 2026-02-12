@@ -47,7 +47,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "Tailwind CSS", "Responsive Design"],
     category: "web",
     githubUrl: "https://github.com/SA-Telecoms00/digital-marketing-and-SEO",
-    liveUrl: "https://nostalgic-yalow.51-254-142-172.plesk.page/services/digital-marketing-seo#cta",
+    liveUrl: "https://nostalgic-yalow.51-254-142-172.plesk.page/services/digital-marketing-seo",
     imageUrl: "/images/projects/digital-marketing.png",
   },
   {
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "Tailwind CSS"],
     category: "web",
     githubUrl: "https://github.com/SA-Telecoms00/Email-hosting-and-security",
-    liveUrl: "https://jovial-antonelli.51-254-142-172.plesk.page/#contact",
+    liveUrl: "https://jovial-antonelli.51-254-142-172.plesk.page",
     imageUrl: "/images/projects/email-hosting.png",
   },
   {
